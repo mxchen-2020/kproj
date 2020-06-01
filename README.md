@@ -1,5 +1,5 @@
-# kproj: A Band Unfolding Program
-This program is currently interfaced to VASP. It can do band unfoldings for both bulk and interface systems modelled in supercells. For interfaces, it uses a technique combining both FFT and back FFT, which accelerates the calculation significantly. 
+# KPROJ: A Band Unfolding Program
+This program is currently interfaced to VASP. It can do band unfoldings for both bulk and interface systems modelled in supercells. For interfaces, it uses a technique combining FFT and back FFT, which accelerates the calculation significantly. 
 
 Contact: Mingxing Chen (mxchen@hunnu.edu.cn), School of Physics and Electronics, Hunan Normal University, Changsha, Hunan 410081, China.
 
