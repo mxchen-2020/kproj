@@ -1,0 +1,57 @@
+Using device 0 (rank 0, local rank 0, local size 4) : Tesla P100-PCIE-16GB
+Using device 0 (rank 1, local rank 1, local size 4) : Tesla P100-PCIE-16GB
+Using device 1 (rank 2, local rank 2, local size 4) : Tesla P100-PCIE-16GB
+Using device 1 (rank 3, local rank 3, local size 4) : Tesla P100-PCIE-16GB
+ running on    4 total cores
+ distrk:  each k-point on    4 cores,    1 groups
+ distr:  one band on    1 cores,    4 groups
+ using from now: INCAR     
+  
+ *******************************************************************************
+  You are running the GPU port of VASP! When publishing results obtained with
+  this version, please cite:
+   - M. Hacene et al., http://dx.doi.org/10.1002/jcc.23096
+   - M. Hutchinson and M. Widom, http://dx.doi.org/10.1016/j.cpc.2012.02.017
+  
+  in addition to the usual required citations (see manual).
+  
+  GPU developers: A. Anciaux-Sedrakian, C. Angerer, and M. Hutchinson.
+ *******************************************************************************
+  
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Aug 02 2018 15:13:56) complex          
+  
+ POSCAR found type information on POSCAR  C 
+ POSCAR found :  1 types and      14 ions
+ LDA part: xc-table for Ceperly-Alder, standard interpolation
+ POSCAR found type information on POSCAR  C 
+ POSCAR found :  1 types and      14 ions
+  
+ WARNING: The GPU port of VASP has been extensively
+ tested for: ALGO=Normal, Fast, and VeryFast.
+ Other algorithms may produce incorrect results or
+ yield suboptimal performance. Handle with care!
+  
+ POSCAR, INCAR and KPOINTS ok, starting setup
+creating 32 CUDA streams...
+creating 32 CUDA streams...
+creating 32 CUDA streams...
+creating 32 CUDA streams...
+creating 32 CUFFT plans with grid size 50 x 32 x 32...
+creating 32 CUFFT plans with grid size 50 x 32 x 32...
+creating 32 CUFFT plans with grid size 50 x 32 x 32...
+creating 32 CUFFT plans with grid size 50 x 32 x 32...
+ FFT: planning ...
+ WAVECAR not read
+ charge-density read from file: vasp                                    
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.347361163929E+03    0.34736E+03   -0.20071E+04 14600   0.102E+03
+DAV:   2    -0.840203122531E+02   -0.43138E+03   -0.41586E+03 21672   0.245E+02
+DAV:   3    -0.140254076773E+03   -0.56234E+02   -0.55945E+02 16912   0.972E+01
+DAV:   4    -0.141647131534E+03   -0.13931E+01   -0.13887E+01 17500   0.188E+01
+DAV:   5    -0.141686892781E+03   -0.39761E-01   -0.39734E-01 19612   0.291E+00
+RMM:   6    -0.141687901066E+03   -0.10083E-02   -0.10083E-02 15934   0.462E-01
+RMM:   7    -0.141688025447E+03   -0.12438E-03   -0.12381E-03 22308   0.125E-01
+RMM:   8    -0.141688026228E+03   -0.78023E-06   -0.96911E-06 13420   0.103E-02
+   1 F= -.14168803E+03 E0= -.14168788E+03  d E =-.295117E-03
+ writing wavefunctions
