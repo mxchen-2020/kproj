@@ -16,7 +16,7 @@ Revealing the substrate origin of the linear dispersion of silicene/Ag(111), M. 
 
 Direct experimental determination of onset of electron-electron interactions in gap opening of zigzag graphene nanoribbons, Y. Y. Li, M. X. Chen, M. Weinert and L. Li, Nat. Commun. 5, 4311 (2014).
 
-3) Effects of doping and interfacing:
+3) Investigating effects of doping and interfacing:
 
 Effects of magnetic dopants in (Li0.8M0.2OH)FeSe (M = Fe, Mn, Co): Density functional theory study using a band unfolding technique, M. X. Chen, W. Chen, Zhenyu Zhang and M. Weinert, Phys. Rev. B 96, 245111 (2017).
 
