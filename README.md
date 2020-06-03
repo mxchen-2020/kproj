@@ -18,8 +18,10 @@ Direct experimental determination of onset of electron-electron interactions in 
 
 3) Effects of doping and interfacing:
 
-Effects of interface oxygen vacancies on electronic bands of FeSe/SrTiO3 (001), M. X. Chen, Zhuozhi Ge, Y. Y. Li, L. Li, Daniel F. Agterberg and M. Weinert,Phys. Rev. B 94, 245139 (2016).
-
 Effects of magnetic dopants in (Li0.8M0.2OH)FeSe (M = Fe, Mn, Co): Density functional theory study using a band unfolding technique, M. X. Chen, W. Chen, Zhenyu Zhang and M. Weinert, Phys. Rev. B 96, 245111 (2017).
 
-Half-metallic Dirac cone in zigzag graphene nanoribbons on graphene, M. X. Chen and M. Weinert, Phys. Rev. B 94, 35433 (2016).
+Effects of interface oxygen vacancies on electronic bands of FeSe/SrTiO3 (001), M. X. Chen, Zhuozhi Ge, Y. Y. Li, L. Li, Daniel F. Agterberg and M. Weinert,Phys. Rev. B 94, 245139 (2016).
+
+Designing substrates for silicene and germanene: First-principles calculations, M. X. Chen, Z. Zhong and M. Weinert, Phys. Rev. B 94, 075409 (2016).
+
+Half-metallic Dirac cone in zigzag graphene nanoribbons on graphene, M. X. Chen and M. Weinert, Phys. Rev. B 94, 035433 (2016).
