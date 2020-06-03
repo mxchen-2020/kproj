@@ -25,3 +25,5 @@ Effects of interface oxygen vacancies on electronic bands of FeSe/SrTiO3 (001), 
 Designing substrates for silicene and germanene: First-principles calculations, M. X. Chen, Z. Zhong and M. Weinert, Phys. Rev. B 94, 075409 (2016).
 
 Half-metallic Dirac cone in zigzag graphene nanoribbons on graphene, M. X. Chen and M. Weinert, Phys. Rev. B 94, 035433 (2016).
+
+Spatial fluctuations in barrier height at the graphene-silicon carbide Schottky junction, S. Rajput, M. X. Chen, Y. Liu, Y. Y. Li, M. Weinert and L. Li, Nat. Commun. 4, 2752 (2013).
