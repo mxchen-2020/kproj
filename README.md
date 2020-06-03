@@ -20,7 +20,7 @@ Direct experimental determination of onset of electron-electron interactions in 
 
 Effects of magnetic dopants in (Li0.8M0.2OH)FeSe (M = Fe, Mn, Co): Density functional theory study using a band unfolding technique, M. X. Chen, W. Chen, Zhenyu Zhang and M. Weinert, Phys. Rev. B 96, 245111 (2017).
 
-Effects of interface oxygen vacancies on electronic bands of FeSe/SrTiO3 (001), M. X. Chen, Zhuozhi Ge, Y. Y. Li, L. Li, Daniel F. Agterberg and M. Weinert,Phys. Rev. B 94, 245139 (2016).
+Effects of interface oxygen vacancies on electronic bands of FeSe/SrTiO3 (001), M. X. Chen, Zhuozhi Ge, Y. Y. Li, L. Li, Daniel F. Agterberg and M. Weinert, Phys. Rev. B 94, 245139 (2016).
 
 Designing substrates for silicene and germanene: First-principles calculations, M. X. Chen, Z. Zhong and M. Weinert, Phys. Rev. B 94, 075409 (2016).
 
