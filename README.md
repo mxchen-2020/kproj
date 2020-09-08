@@ -18,6 +18,14 @@ Direct experimental determination of onset of electron-electron interactions in 
 
 3) Studying effects of doping and interfacing:
 
+Universal mechanical exfoliation of large-area 2D crystals, Yuan Huang et al, Nature Communications 11, Article number: 2453 (2020).
+
+Alloy engineered germanium monochalcogenide with tunable bandgap for broadband optoelectrical applications, Sizhao Liu et al, Phys. Rev. Materials 4, 074012  (2020).
+
+High-performance Photodetector Based on InSe/Cs2XI2Cl2 (X = Pb , Sn , and Ge ) Heterostructures, Yu-Feng Ding et al, Phys. Rev. Applied 13, 064053 (2020).
+
+Coexistence of valley polarization and Chern insulating states in MoS2 monolayers with n-p codoping, Xinyuan Wei, Jiayong Zhang, Bao Zhao, and Zhongqin Yang Scientific Reports 10, Article number: 9851 (2020).
+
 Enhanced Thermoelectric Performance of Zr1–xTaxNiSn Half-Heusler Alloys by Diagonal-Rule Doping, Xiong Yang, Zhou Jiang, Huijun Kang, Zongning Chen, Enyu Guo, Daquan Liu, Fenfen Yang, Rengeng Li, Xue Jiang, and Tongmin Wang, ACS Appl. Mater. Interfaces 12, 3773 (2020).
 
 Electric field control of the semiconductor-metal transition in two dimensional CuInP2S6/germanene van der Waals heterostructure, Ziye Zhu, Xiaofang Chen, Wenbin Li, and Jingshan Qi, Appl. Phys. Lett. 114 223102 (2019).
