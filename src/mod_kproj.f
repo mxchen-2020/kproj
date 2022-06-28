@@ -68,7 +68,7 @@
       IREC = 2
       spin:  do isp=1,ISPIN
 
-      kpoint: do ik=1,NKPTS 
+      kpoint: do ik=1,NKPTS
 
             ! read WAVECAR, get the number of plane waves, k vector
             ! eigenvalue
@@ -116,18 +116,19 @@
             enddo
 
             allocate(CW2(NPL),CRD(NPL))
-
+            
+            !$OMP PARALLEL DO DEFAULT(FIRSTPRIVATE) PRIVATE(CW2,CRD,WFC) SHARED(proj_wt)
             band: do ib = 1,NBANDS
             
               ! get coefficients of wave functions from WAVECAR
-              IREC=IREC+1
+              IREC=IREC+ib
 
               NORM_TEST = 0.0_DP
               IF (SINGLE_PREC) THEN
-                READ(IUW,REC=IREC,ERR=340) (CRD(i),i=1,NPL)
+                READ(IUW,REC=IREC) (CRD(i),i=1,NPL)
                 CW2(1:NPL)=CRD(1:NPL)
               ELSE
-                READ(IUW,REC=IREC,ERR=340) (CW2(i),i=1,NPL)
+                READ(IUW,REC=IREC) (CW2(i),i=1,NPL)
               ENDIF
               !
               ! normalization
@@ -162,6 +163,8 @@
               proj_wt(ib,ik,isp) = proj_wt(ib,ik,isp)/NORM_FACTOR(ib,ik,isp)
              
             enddo band    
+            !$OMP END PARALLEL DO
+            IREC=IREC+NBANDS
             !
             write(IUO,'(5X,A,I4,3f14.8)')"k-projection is done for kpt",ik,KPTVEC(1:3,ik)
             !
@@ -197,8 +200,6 @@
       complex(DP),allocatable :: q_pw(:,:,:,:),q_tmp(:,:,:)
       complex(DP),allocatable :: u_step_z(:),u_step_y(:),u_step_x(:)
       complex(DP),allocatable :: q_pw_x(:,:,:,:),q_pw_y(:,:,:,:),q_pw_z(:,:,:,:)
-      complex(DP),allocatable :: wf_x(:,:),wf_y(:,:),wf_z(:,:)
-      complex(DP)             :: proj_wt_x,proj_wt_y,proj_wt_z,proj_wt_t
 
 !              k-projected information
       real(DP),allocatable    :: wt_proj(:,:)
@@ -321,11 +322,8 @@
             NPL=NINT(RNPL)
 
             NPLG = NPL/NSPINOR
-
-            ! allocate array for G vectors and wave functions
             allocate(GVECT(3,NPLG),wt_proj(NPLG,NSPINOR),WFC(NPLG,NSPINOR))
-            allocate(wf_x(NPLG,NSPINOR),wf_y(NPLG,NSPINOR),wf_z(NPLG,NSPINOR))
-
+            
             wt_proj = 1.0_DP
 
             ! generate G vectors
@@ -340,7 +338,7 @@
             endif
 
             call set_nsphk(NPLG,GVECT)
-
+            
             ! set weights for k-projected bands
             do ip = 1,NPLG
 
@@ -356,21 +354,22 @@
                endif
                !
             enddo
-
             allocate(CW2(NPL),CRD(NPL))
-
-            band: do ib = 1,NBANDS
             
+            !$OMP PARALLEL DO FIRSTPRIVATE(GVECT,wt_proj,IREC,q_pw,nfft,q_tmp) PRIVATE(CW2,CRD,WFC,NORM_TEST,NORM_FACTOR,sum_stepf)           
+            band: do ib = 1,NBANDS
+
               ! get coefficients of wave functions from WAVECAR
-              IREC=IREC+1
 
               NORM_TEST = 0.0_DP
+              !$OMP CRITICAL
               IF (SINGLE_PREC) THEN
-                READ(IUW,REC=IREC,ERR=240) (CRD(i),i=1,NPL)
+                READ(IUW,REC=IREC+ib) (CRD(i),i=1,NPL)
                 CW2(1:NPL)=CRD(1:NPL)
               ELSE
-                READ(IUW,REC=IREC,ERR=240) (CW2(i),i=1,NPL)
+                READ(IUW,REC=IREC+ib) (CW2(i),i=1,NPL)
               ENDIF
+              !$OMP END CRITICAL
               !
               ! normalization
               !
@@ -475,13 +474,16 @@
                endif
                
                proj_wt(ib,ik,isp)=proj_wt(ib,ik,isp)/NORM_FACTOR(ib,ik,isp)
-            enddo band    
+            enddo band
+            !$OMP END PARALLEL DO
+            
+            IREC=IREC+NBANDS
             !
             write(IUO,'(5X,A,I4,3f14.8)')"k-projection is done for kpt",ik,KPTVEC(1:3,ik)
             !
-            deallocate(GVECT,wt_proj,WFC,wf_x,wf_y,wf_z)
+            deallocate(GVECT,wt_proj,WFC)
             deallocate(CW2,CRD)
-            !
+            !            
       enddo kpoint
       enddo spin
 
