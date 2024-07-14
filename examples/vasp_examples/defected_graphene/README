@@ -1,0 +1,24 @@
+1) Under the directory ./gen_structure, I used the program supercell to generate the a 5x5 supercell of graphene.
+   The tranform matrix for the generation of the supercell is:
+   5 0 0
+   0 5 0
+   0 0 1
+   The geometric structure of the generated supercell is given in POSCAR_SUPER
+   Then I removed one carbon atom to get the structure of the defected graphene (see POSCAR_defected_gr.vasp).
+   The program supercell can be found under the directory utils. Make it before using.
+
+2) Then, I did a scf calculation using POSCAR_defected_gr.vasp.
+
+3) I did the band calculation by representing the high symmetry point of the unit cell in the reciprocal lattice vectors of the supercell.
+
+4) Under ./band/plotting_gnuplot, I first run_futils to get the data on a grid for plotting.
+   Then, I did the plot using gnuplot, i.e., gnuplot plotbnds.gnu.
+   Note that I have modified file plotbnds.gnu to set the names of the high symmetry points correctly.
+   Likewise, run_futils has to be done first for the plotting using opendx. 
+
+5) Under the directory band_split, I split the band calculation into a few sub-calculations.
+   After kproj, I copied the output bs_projected.dat to ./band_split/merge_bs and rename them to be 
+   bs_projected.dat_1, bs_projected.dat_2, bs_projected.dat_3, and bs_projected.dat_4, respectively.
+   Then I merged them into one file, bs_projected.dat.
+   Note that the k-path is M-G-K and again the Fermi level in bs_projected.dat has to be correct.
+   The procedure of merging is shown in ./band_split/merge_bs/merge.png.

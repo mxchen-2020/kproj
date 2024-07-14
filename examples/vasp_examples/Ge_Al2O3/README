@@ -1,0 +1,19 @@
+1) In this example, I split the band calculation into four calculations.
+   Two are for the k-path along M-Gamma, and the others are for the k-path along Gamma-K.
+   Note that Germanene is in a 2 x 2 supercell. 
+   Therefore, the transform matrix from the unit cell to the supercell is:
+   2  0  0
+   0  2  0
+   0  0  1
+
+2) After the KPROJ calculations, I copied ./band/MG/CAL1/bs_projected.dat to merge_bs and renamed it as bs_projected.dat_1 and
+   ./band/MG/CAL2/bs_projected.dat to merge_bs and renamed it to be bs_projected.dat_2.
+   Likewise, I copied ./band/GK/CAL1/bs_projected.dat and ./band/GK/CAL2/bs_projected.dat to merge_bs and 
+   renamed them to be bs_projected.dat_3 and bs_projected.dat_4, respectively.
+
+3) Then, I merged bs_projected.dat_1, bs_projected.dat_2, bs_projected.dat_3, 
+   and bs_projected.dat_4 into one bs_projected.dat using the program mergefile (see ./band/merge_bs/merge.png).
+
+4) Note that the Fermi level in bs_projected.dat has to be set correctly, 
+   i.e., using the one from the scf calculation. 
+   If it is a semiconductor, one has to artifically shift the Fermi level to the middle of the gap.

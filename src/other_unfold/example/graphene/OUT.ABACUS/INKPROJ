@@ -1,0 +1,11 @@
+NKPOINT       = 200 
+phonon_unfold =.FALSE.
+ions_type     = 2
+ions_n        = 2  2 
+orbital_n     = 13 13  
+
+! 对应 SOC和考虑自旋，都需要设置NSPIN=2
+! 1个石墨烯 原胞 内有 2个不等价的原子，所以 ntype = 2
+! 超胞 内第一类原子有2个 第二个 原子也有2个 所以 ions_n = 2 2 
+! 这两类原子的轨道数分别为 13 13 ，所以 orbital_n = 13 13
+! 使用声子反折叠功能时候，需要先使用 read.py 转换phonopy的数据格式
