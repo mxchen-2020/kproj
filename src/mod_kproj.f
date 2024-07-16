@@ -197,7 +197,7 @@
       use mod_lattice
       use omp_lib
       use, intrinsic :: iso_c_binding
-!      include "fftw3.f03"
+      include "fftw3.f03"
 !              fft mesh arrays
       complex(DP),allocatable :: q_tmp(:,:,:),q_pw(:,:,:,:)
       complex(DP),allocatable :: u_step_z(:),u_step_y(:),u_step_x(:)
