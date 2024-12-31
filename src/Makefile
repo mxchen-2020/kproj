@@ -33,10 +33,6 @@ LOPT = -FR -mkl
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#================Fox_xml==================================
-finclude =   -I/home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/finclude 
-foxlib   =   /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_wkml.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_dom.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_sax.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_wcml.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_wxml.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_common.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_utils.a /home/jiaxinchen/work/code/2024_11_14/kproj/src/fox/objs/lib/libFoX_fsys.a 
-#=========================================================
 
 #    subdirectories that hold the program files:
 
