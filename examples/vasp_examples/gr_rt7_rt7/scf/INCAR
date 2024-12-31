@@ -1,0 +1,26 @@
+SYSTEM   = vasp
+                                                                                                                             
+!Startparameter for this run:
+    PREC    =  Normal      medium, high or low
+!Electronic Relaxation 1
+    EDIFF   =  1E-06
+!   EDIFFG  = -1E-03
+    LREAL   =  Auto        real-space projection
+                                                                                                                             
+!Ionic relaxation
+    IBRION  = -1
+!   NSW     =  150
+!   ISIF    =  2 
+                                                                                                                         
+!DOS related values:
+    ISMEAR  =  -1
+    SIGMA   =  0.02
+                                                                                                                             
+!Electronic relaxation 2 (details)
+   ALGO  =   fast
+   NELM  = 200
+
+   NPAR  = 4
+
+    LWAVE = .FALSE.
+
