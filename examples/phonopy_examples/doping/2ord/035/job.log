@@ -1,0 +1,43 @@
+ running on   48 total cores
+ distrk:  each k-point on   48 cores,    1 groups
+ distr:  one band on    8 cores,    6 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Aug 13 2022 23:40:43) complex          
+  
+ POSCAR found type information on POSCAR  C  O 
+ POSCAR found :  2 types and      51 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'large supercell' and for larger cells       |
+|      it might be more efficient to use real space projection opertators     |
+|      So try LREAL= Auto  in the INCAR   file.                               |
+|      Mind:          For very  accurate calculation you might also keep the  |
+|      reciprocal projection scheme          (i.e. LREAL=.FALSE.)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR found type information on POSCAR  C  O 
+ POSCAR found :  2 types and      51 ions
+ found WAVECAR, reading the header
+  number of k-points has changed, file:     3 present:     5
+  trying to continue reading WAVECAR, but it might fail
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ reading WAVECAR
+ the WAVECAR file was read successfully
+ charge-density read from file: 1.00000000000000                        
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.453291999605E+03   -0.45329E+03   -0.28414E+02  1356   0.217E+01    0.498E-01
+RMM:   2    -0.454279730015E+03   -0.98773E+00   -0.99017E+00  1416   0.566E+00    0.205E-01
+RMM:   3    -0.454331899771E+03   -0.52170E-01   -0.58433E-01  1575   0.110E+00    0.154E-01
+RMM:   4    -0.454335842612E+03   -0.39428E-02   -0.41348E-02  1574   0.313E-01    0.152E-01
+RMM:   5    -0.454335948336E+03   -0.10572E-03   -0.31805E-03  1512   0.906E-02    0.606E-02
+RMM:   6    -0.454335975029E+03   -0.26693E-04   -0.48415E-04  1530   0.453E-02    0.142E-02
+RMM:   7    -0.454335982450E+03   -0.74206E-05   -0.21308E-05  1029   0.109E-02
+   1 F= -.45433598E+03 E0= -.45433593E+03  d E =-.111949E-03

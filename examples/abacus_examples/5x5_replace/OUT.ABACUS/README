@@ -1,0 +1,14 @@
+1. Process the KPOINTS file using the supercell lattice vectors to describe the high-symmetry points of the Brillouin zone of the primitive cell.
+
+Such as M:(0.5, 0.5, 0)
+|5 0 0||0.5|  |2.5|
+|0 5 0||0.5|= |2.5|
+|0 0 1||0.0|  |0.0|
+
+
+2. Perform the band calculation and output the wavefunction file.
+
+3. Prepare the input file INKPROJ for the band unfolding.
+
+4. Copy the pos_map.dat file here and perform the band unfolding calculation.
+./kproj

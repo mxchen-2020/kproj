@@ -1,0 +1,28 @@
+1) main.f
+Control the workflow of the KPROJ program.
+
+2) mod_comp.f
+Store the basic units and precision parameters.
+
+3) mod_input
+Read the input parameters by a user-friendly control like VASP.
+
+4) mod_wave
+Switch interfaces (VASP, QE, Ab-init) based on the filename of wavefunction, and read parameters such as NKPTS, NBANDS, and ISPIN.
+
+5) mod_lattice.f
+set up lattice quantities, matrices and calculate G-vectors based on the energy cutoff.
+
+6) mod_fft.f
+Fourier transform module.
+
+7) mod_kproj.f
+k-projection based on the plane wave method.
+
+8) mod_step_funciton.f
+Calculate step function during layer k-projection.
+
+9) merge_bndfiles.f
+Merge multiple bs_projected.dat files.
+
+

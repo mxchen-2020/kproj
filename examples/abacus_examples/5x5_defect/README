@@ -1,0 +1,21 @@
+1) Under the directory ./gen, I used the program supercell to generate the a 5x5 supercell of graphene.
+   The tranformation matrix for the generation of the supercell is:
+   5 0 0
+   0 5 0
+   0 0 1
+   The geometric structure of the generated supercell is given in POSCAR_SUPER
+   Then I removed 10st carbon atom to get the structure of the defected graphene and remove the corresponding translation vectors in the pos_map.dat file.
+   note : The number of atoms in the supercell in the pos_map.dat should to be changed to 49.
+   (see ./gen/pos2stru/POSCAR and ./gen/pos2stru/pos_map.dat).
+   The program supercell can be found under the directory utils. Make it before using.
+
+2) I renamed POSCAR_SUPER to POSCAR and used the pos2stru program to convert it to STRU. (see ./gen/pos2stru)
+   Then, I did a scf calculation using STRU.
+
+3) I did the band calculation by representing the high symmetry point of the unit cell in the reciprocal lattice vectors of the supercell.
+
+4) Under ./OUT.ABACUS, I first run_futils to get the data on a grid for plotting.
+   Then, I did the plot using gnuplot, i.e., gnuplot plotbnds.gnu. (see ./OUT.ABACUS/plotbnds_up.eps)
+   Note that I have modified file plotbnds.gnu to set the names of the high symmetry points correctly.
+   Likewise, run_futils has to be done first for the plotting using opendx. 
+

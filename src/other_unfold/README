@@ -1,35 +1,11 @@
-   由于声子的反折叠和原子轨道基下的能带反折叠都与原子实际位置息息相关，
-所以在实际的计算和INKPORJ输入文件的书写过程中，都要严格保证原胞和超胞的
-一一对应关系。
-   对于原子轨道基的能带反折叠：
-   所以我采用了POS_MAP的方法，强制要求用户必须使用supercell程序进行超胞的搭建。
-对于异质结的构建，需要分别将每一层的POS_MAP保存下来，并且记录好，分别用
-supercell产生每一层的超胞后，也请按照一层一层的格式来书写ABABCUS的STRU和
-声子反折叠中的POSCAR。比如对于两个2x2的石墨烯超胞构成的同质结，每一层中各有
-8个原子，而一个石墨烯原胞中有2类C原子，所以对于这个双层石墨烯同质结，
-原子种类（ions_type）为4，其中一层中有2类不等价的原子，而两层的原子又不等价，
-为2*2=4，这里的种类，含义为不等价的原子类型，并非元素类型！
-简而言之:原子书写顺序必须与POS_MAP顺序一一对应！
+1) mod_other.f
+Choose the interface by identifying the wavefunction files from Phonopy and ABACUS.
 
-  ABACUS的计算过程中，周期性体现在晶格上，考虑到搭建异质结后，还会进行结构驰豫
-，所以在搭建超胞前，所使用的原胞的晶格常数，必须先经过合理驰豫，使其结构合理后再
-进行超胞的构建。这样才能尽可能的满足原胞是合理的！原胞并不能随意选取！
+2) mod_metric.f
+set up lattice quantities and matrices.
 
+3) mod_lcao.f
+k-projection based on the LCAO method.
 
-对于phonopy来说，不需要pos_map文件，因为在声子的计算过程中，phonopy选取的方法:
-周期性并不是体现在晶格上，而是体现在原子位置上(周期重复)。所以这时候要考虑驰豫
-前后，原子位置的移动，所以原胞要经过合理的驰豫，再搭建超胞！
-所以这里我假设原胞直接搭成的超胞为POSCAR,驰豫后的结构为CONTCAR，用来读取进行相位计算
-
-在phonon unfold前，需要运行read.py 将band.yaml文件转换成Fortran可读文件。
-需要有Python yaml的函数库
-安装方法： pip install pyyaml
-
-
-如想研究缺陷的影响，则只要在超胞搭建完成后，删去某些原子，并且在
-pos_map中删去对应的原子即可，务必记得在INKRPOJ中也要对应的减少原子数。
-对于研究掺杂带来的影响，则只需在书写STRU/POSCAR时，把掺杂的原子放到最后，这样便能自然忽略掉
-掺杂原子，不需额外改变POS_MAP和INKPROJ,不需在INKPROJ中增加Ions_type和对应的ions_n
-
-
-这些要求，都是波函数与原子位置息息相关相关带来的，无法避免。
+3) mod_phonon.f
+k-projection for phononic band strucutures.

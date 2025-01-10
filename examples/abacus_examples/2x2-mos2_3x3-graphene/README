@@ -1,0 +1,22 @@
+1) In this example, I generated a 2x2 MoS2 supercell and 3x3 graphene supercell. 
+   Therefore, the transformation matrix from the unit cell to the supercell is
+   graphene:  3  0  0     MoS2: 2  0  0 
+              0  3  0           0  2  0
+              0  0  1           0  0  1
+   Then, I combined them to form a heterostructure.(see ./gen/tot/POSCAR)
+   Note : I merged the two pos_map.dat files.(see Tutorial note6)  
+
+2) I renamed ./gen/tot/POSCAR_SUPER to POSCAR and used the pos2stru program to convert it to STRU.  
+   Then, I did scf calculation using POSCAR and band calculation with KLINES_Graphene and KLINS_MoS2 respective.
+
+3) I used the layer k-projection method to project the wavefunction onto graphene and MoS2, respectively.(see ./OUT.ABACUS_Project_graphene and ./OUT.ABACUS_Project_mos2)
+
+4) Note that the transformation matrix of graphene and MoS2 are different, when projecting onto different layers,
+   the corresponding transform matrix and proj_part should be specified in INKPROJ correctly.
+
+
+
+
+
+
+ 

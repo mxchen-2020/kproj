@@ -1,0 +1,85 @@
+ *********************************************************
+ *                                                       *
+ *                  WELCOME TO ABACUS v3.0               *
+ *                                                       *
+ *            'Atomic-orbital Based Ab-initio            *
+ *                  Computation at UStc'                 *
+ *                                                       *
+ *          Website: http://abacus.ustc.edu.cn/          *
+ *                                                       *
+ *********************************************************
+ Thu Nov 14 20:46:50 2024
+ MAKE THE DIR         : OUT.ABACUS/
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: number valence electrons > 6 for Mo: [Kr] 4d5 5s1
+ Please make sure the pseudopotential file is what you need
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ UNIFORM GRID DIM     : 96 * 96 * 192
+ UNIFORM GRID DIM(BIG): 48 * 48 * 96
+ DONE(0.0740757  SEC) : SETUP UNITCELL
+ DONE(0.0893137  SEC) : INIT K-POINTS
+ ---------------------------------------------------------
+ ---------------------------------------------------------
+ SPIN    KPOINTS         PROCESSORS  NBASE       
+ 1       101             16          893         
+ ---------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ---------------------------------------------------------
+ ELEMENT ORBITALS        NBASE       NATOM       XC          
+ C       2s2p1d-7au      13          32          
+ Mo      4s2p2d1f-8au    27          9           
+ S       2s2p1d-7au      13          18          
+ ---------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ---------------------------------------------------------
+ START CHARGE      : file
+ NON-SELF CONSISTENT CALCULATIONS
+
+  |CLASS_NAME---------|NAME---------------|TIME(Sec)-----|CALLS----|AVG------|PER%-------
+                       total               103.45         5         21        1e+02     %
+   Driver              driver_line         103.43         1         1e+02     1e+02     %
+   PW_Basis            setup_struc_factor  0.11807        1         0.12      0.11      %
+   ORB_control         read_orb_first      0.21421        1         0.21      0.21      %
+   LCAO_Orbitals       Read_Orbitals       0.21421        1         0.21      0.21      %
+   ORB_control         set_orb_tables      23.358         1         23        23        %
+   ORB_gen_tables      gen_tables          23.358         1         23        23        %
+   ORB_table_phi       init_Table          17.367         1         17        17        %
+   ORB_table_phi       cal_ST_Phi12_R      17.316         694       0.025     17        %
+   ORB_table_beta      init_Table_Beta     5.5237         1         5.5       5.3       %
+   ORB_table_beta      VNL_PhiBeta_R       5.5091         364       0.015     5.3       %
+   ppcell_vl           init_vloc           0.63673        1         0.64      0.62      %
+   ESolver_KS_LCAO     othercalculation    78.816         1         79        76        %
+   ESolver_KS_LCAO     beforesolver        0.57792        1         0.58      0.56      %
+   ESolver_KS_LCAO     set_matrix_grid     0.31345        1         0.31      0.3       %
+   Grid_Technique      init                0.26536        1         0.27      0.26      %
+   Potential           init_pot            0.49579        1         0.5       0.48      %
+   Potential           update_from_charge  0.49578        1         0.5       0.48      %
+   PW_Basis            recip2real          0.17785        6         0.03      0.17      %
+   Potential           cal_v_eff           0.45845        1         0.46      0.44      %
+   PW_Basis            real2recip          0.17344        6         0.029     0.17      %
+   PotXC               cal_v_eff           0.38517        1         0.39      0.37      %
+   XC_Functional       v_xc                0.37562        1         0.38      0.36      %
+   HSolverLCAO         solve               76.066         1         76        74        %
+   HamiltLCAO          updateHk            8.5754         101       0.085     8.3       %
+   OperatorLCAO        init                8.5747         303       0.028     8.3       %
+   Veff                contributeHk        5.5844         101       0.055     5.4       %
+   Gint_interface      cal_gint            0.25814        1         0.26      0.25      %
+   Gint_interface      cal_gint_vlocal     0.25814        1         0.26      0.25      %
+   Gint_k              folding_vl_k        5.3257         101       0.053     5.1       %
+   Gint_k              Distri              5.1341         101       0.051     5         %
+   Nonlocal<OperatorLCAO>contributeHR        0.1277         1         0.13      0.12      %
+   LCAO_gen_fixedH     build_Nonlocal_mu_new0.12739        1         0.13      0.12      %
+   OperatorLCAO        folding_fixed       2.7356         101       0.027     2.6       %
+   LCAO_nnr            folding_fixedH      2.3092         101       0.023     2.2       %
+   HSolverLCAO         hamiltSolvePsiK     33.587         101       0.33      32        %
+   DiagoElpa           elpa_solve          33.189         101       0.33      32        %
+    Local_Orbital_wfc  wfc_2d_to_grid      33.901         101       0.34      33        %
+   WF_Local            write_lowf_complex  33.543         101       0.33      32        %
+ ----------------------------------------------------------------------------------------
+
+ START  Time  : Thu Nov 14 20:46:50 2024
+ FINISH Time  : Thu Nov 14 20:48:33 2024
+ TOTAL  Time  : 1e+02
+ SEE INFORMATION IN : OUT.ABACUS/

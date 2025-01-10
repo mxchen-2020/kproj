@@ -35,7 +35,7 @@
 
 
 !read transform matrix that transforms a primitive cell into a supercell
-      WRITE(*,'(3X,A)') "Transform matrix (must be integers):"
+      WRITE(*,'(3X,A)') "Transformation matrix (must be integers):"
       WRITE(*,'(5X,A)') "M(1,1)  M(2,1)  M(3,1)"
       WRITE(*,'(5X,A)') "M(1,2)  M(2,2)  M(3,2)"
       WRITE(*,'(5X,A)') "M(1,3)  M(2,3)  M(3,3)"

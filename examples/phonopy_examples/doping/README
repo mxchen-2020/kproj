@@ -1,0 +1,14 @@
+1) Under the directory ./gen, I used the program supercell to generate the a 5x5 supercell of graphene.
+   The tranformation matrix for the generation of the supercell is:
+   5 0 0
+   0 5 0
+   0 0 1
+   The geometric structure of the generated supercell is given in POSCAR_SUPER
+   Then I add a O atom at the end of POSCAR_SUPER(see ./gen/doping/POSCAR ).
+   The program supercell can be found under the directory utils. Make it before using.
+
+2) Then, I did a series of scf calculation using POSCAR to get FORCE_CONSTANTS.
+
+3) I did the band calculation by representing the high symmetry point of the unit cell in the reciprocal lattice vectors of the supercell.(see 2ord/band.conf)
+   note : BAND_LABELS in 2ord/band.conf must be given.
+

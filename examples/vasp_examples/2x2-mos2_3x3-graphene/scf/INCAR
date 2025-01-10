@@ -1,0 +1,24 @@
+ SYSTEM =                                                                                                           
+ Startparameter for this run:                                                                                       
+     ISTART = 0          job   :0-new ; 1-from WAVECAR"                                                             
+     ICHARG = 2          charge:0-from CHGCAR,fail > new ; 1-from CHGCAR ; 2-new ; 11-from CHGCAR and fixed         
+     ISPIN  = 1          spin polarized calculation? 1-no 2-yes default-2                                           
+     PREC   = Accurate                                                                                              
+     ENCUT  = 400        energy cutoff in eV: Default-largest ENMAX from POTCAR-file                                
+                                                                                                                    
+ Ionic relaxation:                                                                                                  
+     ISIF   = 2          stress and relaxation, when IBRION=0,default ISIF=0,other default values is 2.             
+     EDIFFG = -1E-03      stopping-criterion for IOM                                                                
+     NSW    = 0        number of steps for IOM. 0-default                                                         
+     IBRION = -1          ionic relax: ionic relaxation: 0-MD ; 1-quasi-Newton FS; 2-CG BF; 5-frequency ; 6-elastic  
+                                                                                                                    
+ Electronic Relaxation:                                                                                             
+     ISMEAR = 0          -5:Tetrahedral Methods ; 0:Gauss ; N:Methfessel-Paxton                                     
+     SIGMA  = 0.05       Gaussian smearing                                                                          
+     ALGO   = F          N:DAV,fine,slow ; V:RMM,bad,fast ; F:between N an V                                        
+     EDIFF  = 1E-05      stopping-criterion for ELM                                                                 
+     NELM   = 300        the maximum number of electronic SC steps                                                  
+     NPAR   = 6                                                                                                                  
+     LWAVE  = .F.                                                                                                   
+     LCHARG = .T.                                                                                                   
+                                                                                                                    

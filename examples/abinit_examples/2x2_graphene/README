@@ -1,0 +1,16 @@
+1) First, I generated a 2x2 of graphene using the program supercell.
+   The transform matrix is:
+   2  0  0
+   0  2  0
+   0  0  1
+
+2) Then I did the scf and band calculations. 
+   Note that M (0.5, 0, 0) and K (1/3, 1/3, 0) in the BZ of the 1 x 1 cell are represented by the reciprocal lattice vectors of the supercell,
+   which are (1.0, 0, 0) and (2/3, 2/3, 0), respectively (see tutorial for more details).
+
+3) Then, I projected the wavefunctions onto different regions to examine the distribution of the bands in real space.(see ./layer_0.4_0.5 and ./layer_0.8_0.9)
+
+4) Note that the filename of wavefunction in Ab-init is user-defined, so we to be specified it in INKPROJ.(see ./bandunfolding/INKPROJ)
+
+   #the filename of wavefunction    
+   WFCAB = graphene_DS2_WFK 

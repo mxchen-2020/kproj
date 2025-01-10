@@ -1,0 +1,92 @@
+# Crystalline Si
+#
+# Computation of the band structure.
+# First, a SCF density computation, then a non-SCF band structure calculation.
+
+ndtset 2 #
+
+#Dataset 1 : usual self-consistent calculation
+kptopt1 1          # Option for the automatic generation of k points,
+                   # taking into account the symmetry
+nshiftk1 1
+shiftk1  0.0 0.0 0.0
+ngkpt1  12 12 1
+prtden1  1         # Print the density, for use by dataset 2
+toldfe1  1.0d-6    # This value is way too large for most realistic studies of materials
+
+#Dataset 2 : the band structure
+iscf2    -2 
+getden2  -1 
+kptopt2  -2 
+nband     40      
+ndivk2   41 41 41 # 10, 12 and 17 divisions of the 3 segments, delimited
+                       # by 4 points.
+kptbounds2  1.0             0.0            0.0
+            0.0             0.0            0.0
+            0.666666666   0.6666666666   0.0000000000 
+
+tolwfr2  1.0d-12
+enunit2  1             # Will output the eigenenergies in eV
+
+#### cell and system
+natom 8
+ntypat 1
+typat 1 1 1 1 1 1 1 1
+znucl 6
+xred    
+  0.0000000000000000  0.0000000000000000  0.5000000000000000
+  0.0000000000000000  0.5000000000000000  0.5000000000000000
+  0.5000000000000000  0.0000000000000000  0.5000000000000000
+  0.5000000000000000  0.5000000000000000  0.5000000000000000
+  0.3333333429999996  0.1666666719999981  0.5000000000000000
+  0.3333333429999996  0.6666666870000029  0.5000000000000000
+  0.8333333730000021  0.1666666719999981  0.5000000000000000
+  0.8333333730000021  0.6666666870000029  0.5000000000000000
+acell    3*9.319013637
+rprim   
+ 1.000000000000000   0.000000000000000   0.000000000000000
+-0.500000000000000   0.866025404         0.000000000000000
+ 0.000000000000000   0.000000000000000   2.0
+
+### electronic ground state
+#kptopt 1
+#ngkpt 8 8 8
+#nshiftk 1
+#shiftk 0.0 0.0 0.0
+ecut 40.0
+pawecutdg 40.0
+nstep 1000
+#tolrff 0.02
+#toldfe 1.0d-7
+#occopt 3  tsmear 0.0001
+#nband 8
+#diemac 12.0
+#nsppol 2
+#spinat
+#0 0 1
+#0 0 1
+
+### XC
+#ixc 11
+
+### structural optimization
+#optcell 2
+#ionmov 2
+#tolmxf 1.0d-06
+#ntime 50
+
+#ecutsm 0.5
+#dilatmx 1.1
+
+### parallelization
+#autoparal 1
+#paral_kgb 1
+#npband 1
+#bandpp 1
+#npfft 1
+#npkpt 1
+
+### options for printing
+#prtden 0 #otherwise _DEN file printed at each Broyden step
+#prteig 0
+#prtwf 0

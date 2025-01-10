@@ -1,0 +1,18 @@
+INPUT_PARAMETERS
+#Parameters     (General)
+pseudo_dir              ./
+ntype                   3
+#Parameters (Accuracy)
+ecutwfc                 60
+scf_nmax                300  # NELM
+scf_thr                 1.0e-5 #EDIFF
+basis_type              lcao
+
+
+smearing_method         gauss
+smearing_sigma          0.01
+out_mat_hs2             1
+
+calculation             scf
+out_chg                 1
+

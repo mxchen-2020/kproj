@@ -1,0 +1,13 @@
+1) gr_rt7_rt7, an example of band unfolding for a simple supercell of graphene.
+ 
+2) defected_graphene, an example of band unfolding for defected graphene.
+   For this system, the layer projection was not used. 
+   That is, the wavefunctions over the whole space are used for the calculation of the weights of the k-projected wavefunctions.
+   This is usually done for bulk.
+   In addition, an example of splitting the band calculation for large systems is given under the directory band_split.
+
+3) Ge_Al2O3, an example of dealing with interfaces.
+   I split the band calculation into four since the system is large.
+
+4) 2x2-mos2_3x3-graphene , an example of dealing with heterostructure.
+   I project the wavefunctions onto MoS2 and graphene respectively with layer k-projection method.
